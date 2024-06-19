@@ -5,7 +5,7 @@ const ler = require('readline-sync');
 let numeros = [];
 
 for (let i = 1; i < 11; i++) {
-    let numero = ler.question(i+". Informe um numero: ");
+    let numero = ler.questionInt(i+". Informe um numero: ");
     numeros.push(numero);
 }
 
@@ -32,11 +32,11 @@ switch (opt) {
         break;
     case 3:
         let soma = 0;
-
         for (let i = 0; i < numeros.length; i++) {
         console.log(`Valor ${i}: ${numeros[i]}`);
         soma += numeros[i];
-        }   
+        }
+        console.log("Soma total: "+soma)   
         break;
 
     default:
