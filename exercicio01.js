@@ -8,8 +8,13 @@ for (let i = 1; i < 6; i++) {
     let numero = ler.questionFloat(i+". Informe o numero: ")
     numeros.push(numero)
 }
-console.log("----- Numeros Cadastrados -----=-");
+
+let maior = 0;
+
 for (let i = 0; i < numeros.length; i++) {
-    console.log(`Numero na posição ${i}: ${numeros[i]}`);
-    
+    if(numeros[i]> maior){
+        maior = numeros[i];
+    }
 }
+
+console.log("O maior numero da Array e: "+maior);
